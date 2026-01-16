@@ -18,7 +18,7 @@ body {
 }
 
 .container {
-  max-width: 1240px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
@@ -77,4 +77,81 @@ header .navbar {
 
 .banner-image img {
   width: 100%;
+}
+
+/* Feature section */
+
+.feature {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+  padding-top: 120px;
+}
+
+.feature .feature-details {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  max-width: 500px;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.feature-details .feature-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.feature-details .feature-description {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.735);
+  text-align: center;
+}
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  gap: 30px;
+}
+
+.feature-card {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feature-flower {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+}
+
+.feature-flower img {
+  height: 80%;
+}
+
+.feature-card:nth-child(1) .feature-flower {
+  background-color: #e5547366;
+}
+
+.feature-card:nth-child(2) .feature-flower {
+  background-color: #05966864;
+}
+
+.feature-card:nth-child(3) .feature-flower {
+  background-color: #ddf63b75;
+}
+
+.feature-card a {
+  color: black;
+  font-size: 20px;
+  font-weight: 600;
 }
