@@ -1,22 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Flower Shop</title>
-    <link rel="stylesheet" href="style/style.css" />
+    <title>Petalo · Luxury Flower Shop</title>
+    <link rel="stylesheet" href="./style/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
+    <div class="cursor-follower"></div>
+
     <header>
       <nav class="navbar container">
-        <h1>S<span>H</span>T</h1>
-        <div>
-          <button class="btn">Login</button>
+        <div class="logo">
+          <h1>P<span>E</span>T<span class="logo-dot">.</span></h1>
+          <span class="logo-text">luxury blooms</span>
+        </div>
+        <div class="nav-menu" id="navMenu">
+          <ul class="nav-links">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#featured">Collections</a></li>
+            <li><a href="#occasions">Occasions</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="nav-actions">
+          <button
+            class="theme-toggle"
+            id="themeToggle"
+            aria-label="Toggle dark mode"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+          <button class="search-toggle" id="searchToggle">
+            <i class="fas fa-search"></i>
+          </button>
+          <button class="cart-btn">
+            <i class="fas fa-shopping-bag"></i>
+            <span class="cart-count">0</span>
+          </button>
+          <button class="btn btn-primary btn-small">Login</button>
+          <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </div>
       </nav>
 
-      <div class="banner container">
+      <div class="search-bar container" id="searchBar">
+        <input
+          type="text"
+          placeholder="Search for flowers, bouquets, occasions..."
+        />
+        <button><i class="fas fa-search"></i></button>
+      </div>
+
+      <div class="banner container" id="home">
         <div class="banner-details">
+          <span class="banner-subtitle">Welcome to Petalo</span>
           <h1 class="banner-title">
             Let's make beautiful flowers a part of your life.
           </h1>
@@ -25,18 +71,48 @@
             to vibrant seasonal blooms, our collection brings natural beauty to
             your doorstep. Fresh, hand-picked, and delivered with care.
           </p>
-          <button class="btn">Shop Now</button>
+          <div class="banner-buttons">
+            <button class="btn btn-primary">
+              Shop Now <i class="fas fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-outline">
+              Watch Video <i class="fas fa-play"></i>
+            </button>
+          </div>
+          <div class="banner-stats">
+            <div class="stat">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Years</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">50k+</span>
+              <span class="stat-label">Customers</span>
+            </div>
+            <div class="stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Fresh</span>
+            </div>
+          </div>
         </div>
         <div class="banner-image">
-          <img src="./Flower Asset/pngwing 5.png" alt="" />
+          <img
+            src="./Flower Asset/pngwing 5.png"
+            alt="Elegant flower bouquet"
+          />
+          <div class="floating-badge">
+            <i class="fas fa-leaf"></i>
+            <span>Eco-friendly</span>
+          </div>
         </div>
       </div>
     </header>
+
     <main>
-      <div class="feature container">
+      <section class="feature container" id="featured">
         <div class="feature-details">
-          <h2 class="feature-title">Our Featured Flowers</h2>
-          <p class="feature-description">
+          <span class="section-tag">Premium Selection</span>
+          <h2 class="section-title">Our Featured Flowers</h2>
+          <p class="section-description">
             Browse our curated collection of premium flowers, each hand-selected
             for freshness and beauty. Perfect for gifts, events, or simply
             brightening your day.
@@ -44,47 +120,120 @@
         </div>
         <div class="feature-cards">
           <div class="feature-card">
-            <div class="feature-flower">
-              <img src="./Flower Asset/pngwing 6.png" alt="" />
+            <div class="feature-flower" style="background: #fce4e8">
+              <img src="./Flower Asset/pngwing 6.png" alt="Pink flower tree" />
+              <div class="flower-badge">Best Seller</div>
             </div>
-            <a href="">Pink Flower Tree</a>
+            <div class="feature-content">
+              <h3>Pink Flower Tree</h3>
+              <p>Elegant pink blooms</p>
+              <div class="price">$49.99 <span>$69.99</span></div>
+              <button class="btn btn-secondary">Add to Cart</button>
+            </div>
           </div>
           <div class="feature-card">
-            <div class="feature-flower">
-              <img src="./Flower Asset/pngwing 5.png" alt="" />
+            <div class="feature-flower" style="background: #e0f2e9">
+              <img src="./Flower Asset/pngwing 5.png" alt="Pink flower tree" />
+              <div class="flower-badge">New</div>
             </div>
-            <a href="">Pink Flower Tree</a>
+            <div class="feature-content">
+              <h3>Rose Garden</h3>
+              <p>Classic red roses</p>
+              <div class="price">$59.99 <span>$79.99</span></div>
+              <button class="btn btn-secondary">Add to Cart</button>
+            </div>
           </div>
-
           <div class="feature-card">
-            <div class="feature-flower">
-              <img src="./Flower Asset/pngwing 7.png" alt="" />
+            <div class="feature-flower" style="background: #fff1cc">
+              <img src="./Flower Asset/pngwing 7.png" alt="Pink flower tree" />
+              <div class="flower-badge">-25%</div>
             </div>
-            <a href="">Pink Flower Tree</a>
+            <div class="feature-content">
+              <h3>Sunflower Delight</h3>
+              <p>Bright yellow sunflowers</p>
+              <div class="price">$39.99 <span>$54.99</span></div>
+              <button class="btn btn-secondary">Add to Cart</button>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="delivery container">
-        <div class="delivery-card">
-          <img src="./Flower Asset/Group 57.png" alt="" />
-          <p>Same Day Delivery. Click & Collect.</p>
+      <section class="occasions container" id="occasions">
+        <div class="occasions-header">
+          <span class="section-tag">Every Moment Matters</span>
+          <h2 class="section-title">Shop by Occasion</h2>
         </div>
-
-        <div class="delivery-card">
-          <img src="./Flower Asset/Group 58.png" alt="" />
-          <p>Fresh Flowers. Local Growers.</p>
+        <div class="occasion-grid">
+          <div class="occasion-card">
+            <img src="./Flower Asset/Rectangle 4.png" alt="Wedding" />
+            <div class="occasion-overlay">
+              <h3>Wedding</h3>
+              <a href="#">Shop Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="occasion-card">
+            <img src="./Flower Asset/Rectangle 5.png" alt="Anniversary" />
+            <div class="occasion-overlay">
+              <h3>Anniversary</h3>
+              <a href="#">Shop Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="occasion-card">
+            <img src="./Flower Asset/Rectangle 6.png" alt="Birthday" />
+            <div class="occasion-overlay">
+              <h3>Birthday</h3>
+              <a href="#">Shop Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
+          <div class="occasion-card">
+            <img src="./Flower Asset/Flower 01.png" alt="Get Well" />
+            <div class="occasion-overlay">
+              <h3>Get Well</h3>
+              <a href="#">Shop Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
+      </section>
 
-        <div class="delivery-card">
-          <img src="./Flower Asset/Group 59.png" alt="" />
-          <p>24/7 Free Support</p>
+      <section class="services" id="services">
+        <div class="container">
+          <div class="services-header">
+            <span class="section-tag">Why Choose Us</span>
+            <h2 class="section-title">Premium Services</h2>
+          </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-truck"></i>
+              </div>
+              <h3>Same Day Delivery</h3>
+              <p>Order before 2 PM for same-day delivery in your area</p>
+              <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <h3>Fresh Flowers</h3>
+              <p>Direct from local growers, 7-day freshness guarantee</p>
+              <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-headset"></i>
+              </div>
+              <h3>24/7 Support</h3>
+              <p>Round-the-clock customer service for your convenience</p>
+              <a href="#">Learn More <i class="fas fa-arrow-right"></i></a>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
 
-      <div class="deal">
+      <section class="deal">
         <div class="deal-container container">
           <div class="deal-details">
+            <span class="deal-tag">Limited Time Offer</span>
             <h2 class="deal-title">
               Hot Deal ! Sale Up To 25% <span>Off</span>
             </h2>
@@ -93,67 +242,250 @@
               flowers and bouquets. Perfect for celebrations, gifts, or just to
               brighten up your space. Limited time offer!
             </p>
-            <button class="btn">Sign Up</button>
+            <div class="deal-countdown" id="countdown">
+              <div class="countdown-item">
+                <span class="countdown-number" id="days">03</span>
+                <span class="countdown-label">Days</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="hours">12</span>
+                <span class="countdown-label">Hours</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="minutes">45</span>
+                <span class="countdown-label">Mins</span>
+              </div>
+              <div class="countdown-item">
+                <span class="countdown-number" id="seconds">30</span>
+                <span class="countdown-label">Secs</span>
+              </div>
+            </div>
+            <button class="btn btn-primary">
+              Sign Up & Save <i class="fas fa-gift"></i>
+            </button>
           </div>
           <div class="deal-image">
-            <img src="./Flower Asset/pngwing 8.png" alt="" />
+            <img
+              src="./Flower Asset/pngwing 8.png"
+              alt="Beautiful flower deal"
+            />
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="instagram container">
+      <section class="testimonials container">
+        <div class="testimonials-header">
+          <span class="section-tag">Customer Love</span>
+          <h2 class="section-title">What Our Clients Say</h2>
+        </div>
+        <div class="testimonial-slider">
+          <div class="testimonial-card active">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "The flowers were absolutely stunning! Arranged beautifully and
+              delivered on time. Will definitely order again."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/100?img=7" alt="Sarah Johnson" />
+              <div>
+                <h4>Sarah Johnson</h4>
+                <span>Wedding Client</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Exceptional quality and service. The bouquet lasted over two
+              weeks! My wife was thrilled with the anniversary surprise."
+            </p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/100?img=3" alt="Michael Chen" />
+              <div>
+                <h4>Michael Chen</h4>
+                <span>Anniversary</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="testimonial-text">
+              "Perfect for our corporate event. Professional service and
+              absolutely gorgeous arrangements. Highly recommended!"
+            </p>
+            <div class="testimonial-author">
+              <img src="https://i.pravatar.cc/100?img=1" alt="Emma Davis" />
+              <div>
+                <h4>Emma Davis</h4>
+                <span>Corporate Events</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="slider-dots">
+          <span class="dot active"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </section>
+
+      <section class="instagram container">
         <div class="instagram-details">
-          <h2 class="instagram-title">Instagram</h2>
-          <p class="instagram-description">
+          <span class="section-tag">Follow Us</span>
+          <h2 class="section-title">@PetaloFlowers</h2>
+          <p class="section-description">
             Follow us on Instagram for daily floral inspiration,
             behind-the-scenes looks, and exclusive updates on our latest
             collections.
           </p>
         </div>
-
-        <div class="instagram-images">
-          <div class="instagram-image">
-            <img src="./Flower Asset/Rectangle 4.png" alt="" />
+        <div class="instagram-grid">
+          <div class="instagram-item">
+            <img
+              src="./Flower Asset/Rectangle 4.png"
+              alt="Floral arrangement"
+            />
+            <div class="instagram-overlay">
+              <i class="fab fa-instagram"></i>
+              <span>2.5k likes</span>
+            </div>
           </div>
-          <div class="instagram-image">
-            <img src="./Flower Asset/Rectangle 5.png" alt="" />
+          <div class="instagram-item">
+            <img
+              src="./Flower Asset/Rectangle 5.png"
+              alt="Floral arrangement"
+            />
+            <div class="instagram-overlay">
+              <i class="fab fa-instagram"></i>
+              <span>1.8k likes</span>
+            </div>
           </div>
-          <div class="instagram-image">
-            <img src="./Flower Asset/Rectangle 6.png" alt="" />
+          <div class="instagram-item">
+            <img
+              src="./Flower Asset/Rectangle 6.png"
+              alt="Floral arrangement"
+            />
+            <div class="instagram-overlay">
+              <i class="fab fa-instagram"></i>
+              <span>3.2k likes</span>
+            </div>
           </div>
-          <div class="instagram-image">
-            <img src="./Flower Asset/Flower 01.png" alt="" />
+          <div class="instagram-item">
+            <img src="./Flower Asset/Flower 01.png" alt="Floral arrangement" />
+            <div class="instagram-overlay">
+              <i class="fab fa-instagram"></i>
+              <span>4.1k likes</span>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="latest-deal container">
+      <section class="latest-deal container">
         <h2>Get The Latest Deals</h2>
-        <p>$30 coupon for first Order</p>
-        <div class="email">
+        <p>$30 coupon for first Order + Free Shipping</p>
+        <div class="email-subscribe">
           <input
             type="email"
-            name=""
-            id=""
-            placeholder="Enter your email .... "
+            placeholder="Enter your email address"
+            id="subscribeEmail"
           />
-          <button class="btn">Subscribe</button>
+          <button class="btn btn-primary" id="subscribeBtn">
+            Subscribe Now
+          </button>
+        </div>
+        <div class="subscribe-message" id="subscribeMessage"></div>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <div class="footer-container container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3 class="footer-logo">
+              P<span>E</span>T<span class="dot">.</span>
+            </h3>
+            <p class="footer-about">
+              Bringing nature's beauty to your doorstep with fresh, handcrafted
+              floral arrangements that speak the language of love, celebration,
+              and everyday joy.
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Our Collections</a></li>
+              <li><a href="#">Occasions</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Customer Service</h4>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping Policy</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Track Order</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Contact Info</h4>
+            <ul class="contact-info">
+              <li>
+                <i class="fas fa-map-marker-alt"></i> 123 Flower Street, NY
+                10001
+              </li>
+              <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+              <li><i class="fas fa-envelope"></i> hello@petalo.com</li>
+              <li><i class="fas fa-clock"></i> Mon-Sat: 9am - 8pm</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="payment-methods">
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-amex"></i>
+            <i class="fab fa-cc-paypal"></i>
+          </div>
+          <p>
+            &copy; 2023 Petalo Flower Shop. All rights reserved. | Designed with
+            <i class="fas fa-heart"></i> for flower lovers
+          </p>
         </div>
       </div>
-    </main>
-    <footer>
-      <div class="footer-container container">
-        <h2 class="footer-title">
-          S<span>H</span>T &nbsp;<span>Flower</span>Shop
-        </h2>
-        <p class="footer-description">
-          Bringing nature's beauty to your doorstep with fresh, handcrafted
-          floral <br />
-          arrangements that speak the language of love, celebration, and
-          everyday joy.
-        </p>
-        <small>@2020-2023, SHT FlowerShop.com. All rights reserved.</small>
-      </div>
     </footer>
+
+    <div class="back-to-top" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
